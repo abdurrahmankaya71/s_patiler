@@ -1,0 +1,49 @@
+{% extends 'partials/_base.html'%}
+{% load static %}
+{% block content %}
+
+{% for i in mark.groups.all %}
+  {{i.first_year}}
+{% endfor %}
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+  <h1 class="heading"><span>Hizmetlerimiz</span></h1>
+
+  <div class="box-container">
+    <div class="box">
+      <i class="fas fa-dog"></i>
+      <h3>Köpek Aşıları</h3>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-cat"></i>
+      <h3>Kedi Aşıları</h3>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-bath"></i>
+      <h3>Hijyen ve Bakım</h3>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-drumstick-bite"></i>
+      <h3>Sağlıklı Beslenme</h3>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-baseball-ball"></i>
+      <h3>Aktivite Egzersizi</h3>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-heartbeat"></i>
+      <h3>Pet Aşıları</h3>
+    </div>
+  </div>
+</section>
+
+<!-- services section ends -->
+
+{% endblock %}

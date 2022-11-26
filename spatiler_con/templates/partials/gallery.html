@@ -1,0 +1,31 @@
+{% extends 'partials/_base.html'%} {% load static %} {% block content %}
+
+<!-- shop section starts  -->
+
+<section class="shop" id="shop">
+  <h1 class="heading"><span>Ürünlerimiz</span></h1>
+
+  <div class="box-container">
+    {% for shop in shops %}
+    <div class="box">
+      {% if shop.image %}
+      <div class="icons">
+        <a href="#" class="fas fa-shopping-cart"></a>
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-eye"></a>
+      </div>
+      <div class="image">
+        <img src="{{shop.image.url}}" alt="" />
+      </div>
+      {% else %} Resim Yok {% endif %}
+      <div class="content">
+        <h3>{{shop.name}}</h3>
+        <div class="amount">{{shop.price}}&#8378;</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- shop section ends -->
+{% endblock %}

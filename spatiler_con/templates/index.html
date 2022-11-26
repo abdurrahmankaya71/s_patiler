@@ -1,0 +1,194 @@
+{% extends 'partials/_base.html'%} {% load static %} {% block content %}
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+  <div class="content">
+    <h3><span>Sevimli Patiler</span> Güvenilir Sağlık Çözümleri</h3>
+    <!-- <a href="{% static './partials/booking.html' %}" class="btnn">Randevu Al</a> -->
+  </div>
+
+  <img src="{% static 'image/bottom_wave.png' %}" class="wave" alt="" />
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+  <div class="image">
+    <img src="{% static 'image/about_img.png' %}" alt="" />
+  </div>
+
+  <div class="content">
+    <h3>Sizin Dostunuz <span>Bizim Dostumuzdur</span></h3>
+    <p>
+      Veterinerimiz
+      <span style="font-weight: bold; font-size: large"> Ahmet Aydın</span>
+      taradan 2007 yılında kurulan veteriner kliniğimiz bugüne kadar ara
+      vermeksizin kaliteli hizmet vermeye devam etmektedir, Minik dostlarınızın
+      operasyon işlemlerini titizlikle sürdürmekteyiz. Minik dostlarınız için
+      modern yöntemler kullanıyoruz, işimizi şansa bırakmıyoruz. Samimi ve
+      bilgili personellerimizle daima güler yüzlü hizmetle karşılaşacaksınız.
+    </p>
+  </div>
+</section>
+
+<!-- about section ends -->
+
+<!-- dog and cat food banner section starts -->
+
+<div class="dog-food">
+  <div class="image">
+    <img src="{% static 'image/dog_food.png' %}" alt="" />
+  </div>
+
+  <div class="content">
+    <h3><span>Kuzu Etli</span> Köpek maması</h3>
+    <p>
+      Sevimli patilerimiz farklı ve yeni mamaları denesinler diye, indirim
+      yaptık!!
+    </p>
+    <div class="amount">
+      <del style="text-decoration: line-through">300&#8378;</del> - 240&#8378;
+    </div>
+    <a href="#">
+      <img src="{% static 'image/shop_now_dog.png' %}" alt="" />
+    </a>
+  </div>
+</div>
+
+<div class="cat-food">
+  <div class="content">
+    <h3><span>Somonlu</span> Yetişkin Kedi Maması</h3>
+    <p>
+      Sevimli patilerimiz farklı ve yeni mamaları denesinler diye, indirim
+      yaptık!!
+    </p>
+    <div class="amount">
+      <del style="text-decoration: line-through">300&#8378;</del> - 240&#8378;
+    </div>
+    <a href="#">
+      <img src="{% static 'image/shop_now_cat.png' %}" alt="" />
+    </a>
+  </div>
+
+  <div class="image">
+    <img src="{% static 'image/cat_food.png' %}" alt="" />
+  </div>
+</div>
+
+<!-- dog and cat food banner section ends -->
+
+<!-- shop section starts  -->
+
+<!-- <section class="shop" id="shop">
+  <h1 class="heading"><span>Ürünlerimiz</span></h1>
+
+  <div class="box-container">
+    {% for shop in shops %}
+    <div class="box">
+      {% if shop.image %}
+      <div class="icons">
+        <a href="#" class="fas fa-shopping-cart"></a>
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-eye"></a>
+      </div>
+      <div class="image">
+        <img src="{{shop.image.url}}" alt="" />
+      </div>
+      {% else %} Resim Yok {% endif %}
+      <div class="content">
+        <h3>{{shop.name}}</h3>
+        <div class="amount">{{shop.price}}&#8378;</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section> -->
+
+<!-- shop section ends -->
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+  <h1 class="heading"><span>Hizmetlerimiz</span></h1>
+
+  <div class="box-container">
+    <div class="box">
+      <i class="fas fa-dog"></i>
+      <h3>Köpek Aşıları</h3>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-cat"></i>
+      <h3>Kedi Aşıları</h3>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-bath"></i>
+      <h3>Hijyen ve Bakım</h3>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-drumstick-bite"></i>
+      <h3>Sağlıklı Beslenme</h3>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-baseball-ball"></i>
+      <h3>Aktivite Egzersizi</h3>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-heartbeat"></i>
+      <h3>Pet Aşıları</h3>
+    </div>
+  </div>
+</section>
+
+<!-- services section ends -->
+
+<!-- <section class="contact" id="contact">
+  <div class="image">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.3839858447186!2d29.062234115373812!3d40.99496797930217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac7ee414a3ff5%3A0x2e566ef395311487!2sIstanbul%20Medeniyet%20University!5e0!3m2!1sen!2str!4v1666880456432!5m2!1sen!2str"
+      width="600"
+      height="400"
+      style="border: 0; margin-left: 60px; margin-top: 120px"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+    <a
+      href="tel:05510323354"
+      class="tel"
+      style="font-size: 30px; margin-top: 20px; text-align: center"
+    >
+      05510323354</a
+    >
+    <p
+      style="
+        font-size: 15px;
+        margin-top: 10px;
+        margin-left: 100px;
+        text-align: center;
+        width: 500px;
+      "
+    >
+      Acil durumlarda 7/24 bizimle İletişime geçebilirsiniz, haritaya
+      tıklayınız, çalışma saatlerimize, adrese ve yol tarifine ulaşacaksınız.
+    </p>
+  </div>
+
+  <form action="">
+    <h3>Bizimle İletişime Geçin</h3>
+    <input type="text" placeholder="Ad Syoad" class="box" />
+    <input type="email" placeholder="Email" class="box" />
+    <input type="number" placeholder="Telefon" class="box" />
+    <textarea name="" placeholder="Mesaj" id="" cols="30" rows="10"></textarea>
+    <input type="submit" value="Gönder" class="btnn" />
+  </form>
+</section> -->
+
+{% endblock %}
