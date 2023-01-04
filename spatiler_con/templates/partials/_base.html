@@ -3,11 +3,19 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sevimli Patiler</title>
+
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous" defer></script>
+
     <!-- font awesome cdn link  -->
     <link
       rel="stylesheet"
@@ -22,14 +30,17 @@
     <!-- header section starts  -->
 
     <header class="header">
-      <a href="#" class="logo"> <i class="fas fa-paw"></i> Sevimli Patiler </a>
+      <a style="text-decoration: none;" href="#" class="logo"> <i class="fas fa-paw"></i> Sevimli Patiler </a>
 
       <nav class="navbar">
-        <a href="{% url 'index'%}">Ana Sayfa</a>
-        <a href="{% url 'booking'%}">Randevu Al</a>
-        <a href="{% url 'shop'%}">Ürünler</a>
-        <a href="{% url 'services'%}">Hizmetlerimiz</a>
-        <a href="{% url 'contact'%}">İletişim</a>
+        <a style="text-decoration: none;" href="{% url 'index'%}">Ana Sayfa</a>
+        <a style="text-decoration: none;" href="{% url 'booking'%}">Randevu Al</a>
+        <a style="text-decoration: none;" href="{% url 'shop'%}">Ürünler</a>
+        <a style="text-decoration: none;" href="{% url 'services'%}">Hizmetlerimiz</a>
+        <a style="text-decoration: none;" href="{% url 'contact'%}">İletişim</a>
+        <a style="text-decoration: none;" href="{% url 'staffPanel'%}">Randevularım</a>
+        <a style="text-decoration: none;" href="{% url 'userPanel'%}">Randevu Düzenle</a>
+
       </nav>
 
       <div class="icons">
@@ -72,6 +83,16 @@
     </header>
 
     <!-- header section ends -->
+                  <!--Messages Start-->
+                  {% if messages %}
+                  {% for message in messages %}
+                      <div class="alert alert-success  alert-dismissible fade show text-center " role="alert">
+                          <h3 class="display-3">{{ message }}</h3>
+                          <button type="button" class="btn-close fs-1 position-absolute top-50 start-0 translate-middle-y" data-bs-dismiss="alert" aria-label="Close"></button>
+                      </div>
+                  {% endfor %}
+                  {% endif %}
+                  <!--Messages End-->
   </body>
 </html>
 
@@ -87,6 +108,7 @@
             href="https://www.facebook.com/"
             class="btnn"
             target="_blank"
+            style="text-decoration: none;"
           >
             <i class="fab fa-facebook-f"></i> facebook
           </a>
@@ -94,6 +116,7 @@
             href="https://www.twitter.com/"
             class="btnn"
             target="_blank"
+            style="text-decoration: none;"
           >
             <i class="fab fa-twitter"></i> twitter
           </a>
@@ -101,6 +124,7 @@
             href="https://www.instagram.com/"
             class="btnn"
             target="_blank"
+            style="text-decoration: none;"
           >
             <i class="fab fa-instagram"></i> instagram
           </a>
@@ -108,6 +132,7 @@
             href="https://www.linkedin.com/"
             class="btnn"
             target="_blank"
+            style="text-decoration: none;"
           >
             <i class="fab fa-linkedin"></i> linkedin
           </a>
@@ -115,6 +140,7 @@
             href="https://www.pinterest.com/"
             class="btnn"
             target="_blank"
+            style="text-decoration: none;"
           >
             <i class="fab fa-pinterest"></i> pinterest
           </a>

@@ -26,7 +26,8 @@ urlpatterns = [
     path('', include('pages.urls')),  # artik direkt pages.urls'e yonlendirecek ve oradaki ilgili requestler cagirilacak
     path('shop', include('shop.urls')),
     path('contact/', include('form.urls')),
-    # path('booking/', include('booking.urls')),
+    path('booking/', include('booking.urls')),
+    # path('service/', include('service.urls')),
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

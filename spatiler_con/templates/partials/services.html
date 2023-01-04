@@ -2,19 +2,26 @@
 {% load static %}
 {% block content %}
 
-{% for i in mark.groups.all %}
+<!-- {% for i in mark.groups.all %}
   {{i.first_year}}
-{% endfor %}
+{% endfor %} -->
 
 <!-- services section starts  -->
 
+<style>
+  body {
+      min-height: auto;
+  }
+</style>
+
 <section class="services" id="services">
-  <h1 class="heading"><span>Hizmetlerimiz</span></h1>
+  <h1 style="margin-bottom: 40px;" class="heading"><span>Hizmetlerimiz</span></h1>
 
   <div class="box-container">
-    <div class="box">
-      <i class="fas fa-dog"></i>
-      <h3>Köpek Aşıları</h3>
+    <div class="box-container">
+      <div class="box">
+        <i class="fas fa-dog"></i>
+        <h3>Köpek Aşıları</h3>
     </div>
 
     <div class="box">

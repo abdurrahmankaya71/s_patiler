@@ -1,0 +1,75 @@
+<title>Randevularım</title>
+{% extends 'layout.html' %}
+{% load static %}
+{% block body %}
+
+
+
+
+
+<style>
+  body {
+      min-height: auto;
+  }
+</style>
+
+<div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5 ">
+    <h1 class="text-center mt-5 mb-5">Randevularım</h1>
+    <input class="form-control form-control-lg fs-3 border border-primary" id="myInput" type="text" placeholder="Randevularımda Ara">
+    <br>
+    
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped table-hover mx-auto">
+          <thead>
+            <tr>
+              <th class="text-center" scope="col">Ad</th>
+              <th class="text-center" scope="col">Soyad</th>
+              <th class="text-center" scope="col">Telefon Numarası</th>
+              <th class="text-center" scope="col">Email</th>
+              <th class="text-center" scope="col">Hizmet Türü</th>
+              <th class="text-center" scope="col">Hayvan</th>
+              <th class="text-center" scope="col">Hayvan Cinsiyeti</th>
+              <th class="text-center" scope="col">Randevu Tarihi</th>
+              <th class="text-center" scope="col">Randevu Saati</th>
+            </tr>
+          </thead>
+          <tbody id="myTable">
+            {% for item in items %}
+            <tr>
+              <td class="text-center">{{item.name}}</td>
+              <td class="text-center">{{item.surname}}</td>
+              <td class="text-center">{{item.phone}}</td>
+              <td class="text-center">{{item.email}}</td>
+              <td class="text-center">{{item.service}}</td>
+              <td class="text-center">{{item.animal}}</td>
+              <td class="text-center">{{item.gender}}</td>
+              <td class="text-center">{{item.day}}</td>
+              <td class="text-center">{{item.time}}</td>
+
+              <!-- <td class="text-center">{{item.email}}</td> -->
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<!-- Search -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+</script>
+
+{% endblock %}

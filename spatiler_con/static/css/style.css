@@ -8,11 +8,9 @@
   outline: none;
   border: none;
   text-decoration: none;
-  text-transform: capitalize;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
 }
-
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -976,3 +974,4 @@ section {
     flex-direction: row;
   }
 }
+

@@ -1,5 +1,10 @@
 {% extends 'partials/_base.html'%} {% load static %} {% block content %}
 <!-- header section ends -->
+<style>
+  body {
+    min-height: auto;
+  }
+</style>
 
 <section class="contact" id="contact">
   <div class="image">
@@ -15,7 +20,7 @@
     <a
       href="tel:05510323354"
       class="tel"
-      style="font-size: 30px; margin-top: 20px; text-align: center"
+      style="font-size: 30px; margin-top: 20px; text-align: center; text-decoration: none;"
     >
       05510323354</a
     >
@@ -36,9 +41,29 @@
   <form action="/contact/" method="post">
     {% csrf_token %}
     <h3>Bizimle İletişime Geçin</h3>
-    <input type="text" name="user_name" placeholder="Ad Syoad" class="box" required />
-    <input type="email" name="email" placeholder="Email" class="box" required/>
-    <input type="number" name="phone_num" placeholder="Telefon" class="box" required />
+    <input
+      type="text"
+      name="user_name"
+      placeholder="Ad Syoad"
+      class="box"
+      required
+      maxlength="30"
+    />
+    <input
+      type="email"
+      name="email"
+      placeholder="Email"
+      class="box"
+      required
+    />
+    <input
+      type="number"
+      name="phone_num"
+      placeholder="Telefon"
+      class="box"
+      required
+
+    />
     <textarea
       name="message"
       placeholder="Mesaj"
@@ -47,6 +72,7 @@
       rows="10"
     ></textarea>
     <input type="submit" value="Gönder" class="btnn" />
+  </div>
   </form>
 </section>
 

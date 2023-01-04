@@ -1,4 +1,6 @@
 from django.db import models
+# from .models import ContactFormModel
+
 
 # Create your models here.
 
@@ -10,3 +12,7 @@ class ContactFormModel(models.Model):
     
     def __str__(self):
         return self.user_name
+
+    class Meta:
+        verbose_name = "Mesaj"
+        verbose_name_plural = "Mesajlar"        

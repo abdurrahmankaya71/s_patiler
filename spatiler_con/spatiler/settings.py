@@ -42,7 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pages.apps.PagesConfig',
     'shop.apps.ShopConfig',
-    'form'
+    'form',
+    'booking',
+    # 'service',
 ]
 
 MIDDLEWARE = [
